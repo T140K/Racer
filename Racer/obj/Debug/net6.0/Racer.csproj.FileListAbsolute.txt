@@ -1,0 +1,15 @@
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.csproj.AssemblyReference.cache
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.GeneratedMSBuildEditorConfig.editorconfig
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.AssemblyInfoInputs.cache
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.AssemblyInfo.cs
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.csproj.CoreCompileInputs.cache
+E:\VS-Projects\Racer\Racer\bin\Debug\net6.0\Racer.exe
+E:\VS-Projects\Racer\Racer\bin\Debug\net6.0\Racer.deps.json
+E:\VS-Projects\Racer\Racer\bin\Debug\net6.0\Racer.runtimeconfig.json
+E:\VS-Projects\Racer\Racer\bin\Debug\net6.0\Racer.dll
+E:\VS-Projects\Racer\Racer\bin\Debug\net6.0\Racer.pdb
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.dll
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\refint\Racer.dll
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.pdb
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\Racer.genruntimeconfig.cache
+E:\VS-Projects\Racer\Racer\obj\Debug\net6.0\ref\Racer.dll
