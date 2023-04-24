@@ -8,32 +8,27 @@ namespace Racer
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Car racer");
+            Console.WriteLine("Car racer game! Press Enter to start");
             Console.ReadKey();
+            Console.WriteLine("The race has started!\n\n Press Enter to get updates on the cars position and speed!");
 
             Car Car1 = new Car
             {
-                id = 1,
                 name = "Volvo",
                 speed = 120,
-                distanceSoFar = 0,
-                distanceLeft = 10000
+                distanceSoFar = 0
             };
             Car Car2 = new Car
             {
-                id = 2,
                 name = "Mercedes",
                 speed = 120,
-                distanceSoFar = 0,
-                distanceLeft = 10000
+                distanceSoFar = 0
             };
             Car Car3 = new Car
             {
-                id = 3,
                 name = "Audi",
                 speed = 120,
-                distanceSoFar = 0,
-                distanceLeft = 10000
+                distanceSoFar = 0
             };
 
             var carRace1 = RaceStart(Car1);
@@ -101,7 +96,7 @@ namespace Racer
                     {
                         string distanceSF = c.distanceSoFar.ToString("0");
 
-                        Console.WriteLine($"{c.name} has driven {distanceSF} meters at {c.speed}km/h. {c.distanceLeft} meters left.");
+                        Console.WriteLine($"{c.name} has driven {distanceSF} meters and is going {c.speed}km/h.");
                     });
                     gotKey = false;
                 }
@@ -113,7 +108,7 @@ namespace Racer
 
                 var totalRemaining = cars.Select(c => c.distanceSoFar).Sum();
 
-                if (totalRemaining >= 30000)
+                if (totalRemaining >= 30000m)
                 {
                     return;
                 }
@@ -126,9 +121,7 @@ namespace Racer
             while (true)
             {
                 await Wait();
-                car.distanceSoFar += (((car.speed * 1000) * timeWarp) / 3600);
-                car.timeSoFar += timeWarp;
-                car.distanceLeft = 10000 - car.distanceSoFar;
+                car.distanceSoFar += (((car.speed * 1000) * timeWarp) / 3600m);
                 Event(car);
 
                 if (car.delay > 0)
@@ -136,7 +129,7 @@ namespace Racer
                     await Wait(car.delay);
                     car.delay = 0;
                 }
-                if (car.distanceSoFar >= 10000)
+                if (car.distanceSoFar >= 10000m)
                 {
                     return car;
                 }
@@ -157,7 +150,7 @@ namespace Racer
                 Console.WriteLine($"{car.name} has lost a tire! The change will take 20 seconds!");
                 car.delay += 20;
             }
-            else if (n >= 3 && n <= 7)
+            else if (n >= 43 && n <= 47)
             {
                 Console.WriteLine($"A bird crashed into {car.name}'s windshield! The removal will take 10 seconds!");
                 car.delay += 10;
@@ -167,7 +160,10 @@ namespace Racer
                 car.speed = car.speed - 1;
                 Console.WriteLine($"{car.name}'s engine made a wierd sound! The speed has gone down to {car.speed}km/h");
             }
-
+            else
+            {
+                car.delay = 0;
+            }
         }
 
         public async static Task Wait(int delay = 1)
